@@ -1,0 +1,7 @@
+{
+  "presets": [
+    ["es2015"],
+    // webpack understands the native import syntax, and uses it for tree shaking
+    "stage-2"
+  ]
+}

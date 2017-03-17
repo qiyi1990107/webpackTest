@@ -1,0 +1,7 @@
+h1{margin:0;padding:0;}
+.test{
+  font-size: 18px;  color:red;width: 200px; height: 200px; text-align: center; line-height: 200px; background: url(./images/house11.jpg) no-repeat;           
+}   
+.test2{
+  background: url("./images/house8.jpg") no-repeat; 
+}

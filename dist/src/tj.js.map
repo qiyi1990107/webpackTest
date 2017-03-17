@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/tj.js"],"names":["test","alert"],"mappings":";;;;;kBAAwBA,I;AAAT,SAASA,IAAT,GAAe;AAC5BC,QAAM,KAAN;AACD","file":"tj.js","sourcesContent":["export default function test(){\r\n  alert(\"fff\");\r\n}"]}
