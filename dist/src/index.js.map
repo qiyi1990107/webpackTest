@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../src/index.js"],"names":[],"mappings":";;AAAA;;;;AACA","file":"index.js","sourcesContent":["import Vue from 'vue';\r\nimport App from \"./app.vue\";"]}
+{"version":3,"sources":["../../src/index.js"],"names":["el","render"],"mappings":";;AAAA;;;;AACA;;;;;;AACA,kBAAQ;AACNA,MAAI,MADE;AAENC,UAAO;AAAA;AAAA;AAFD,CAAR","file":"index.js","sourcesContent":["import Vue from 'vue';\r\nimport App from \"./app.vue\";\r\nnew Vue({\r\n  el: '#app',\r\n  render:h=>App,\r\n})"]}

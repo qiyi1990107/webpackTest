@@ -48,9 +48,22 @@ module.exports = {
       use: ['babel-loader'],
       exclude: /node_modules/
     }, {
-      test: /\.css$/,
-      use: [{ loader: "style-loader" }, { loader: "css-loader" }]
-    }, {
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
+        loaders: {
+          css: 'vue-style-loader!css-loader'
+        }
+      }
+    },
+    // {
+    //   test: /\.css$/,
+    //   use: [
+    //     { loader: "style-loader" },
+    //     { loader: "css-loader" },
+    //   ]
+    // }
+    {
       test: /\.(jpg|jpeg|png|gif|svg)$/,
       use: [{
         loader: "url-loader", options: { limit: 2000, name: "[path][name].[ext]" }
