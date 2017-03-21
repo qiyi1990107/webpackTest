@@ -1,12 +1,3 @@
 <template>
-    <div id="app">
-        <Hello></Hello>
-    </div>
+  <div id="app">1111</div>
 </template>
-
-<script>
-    import Hello from "./components/hello.vue";
-    export default{
-        components:{Hello}
-    }
-</script>
