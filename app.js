@@ -7,14 +7,14 @@ import { resolve } from "path";
 let app = express();
 let compiler = webpack(wc);
 compiler.watch({}, (err, stats) => {
-    console.log(stats.toString({
-        chunks: false,  // 使构建过程更静默无输出
-        colors: true    // 在控制台展示颜色
-    }));
+    // console.log(stats.toString({
+    //     // chunks: false,  // 使构建过程更静默无输出
+    //     colors: true    // 在控制台展示颜色
+    // }));
 })
 app.use(wdm(compiler, {
     publicPath: wc.output.publicPath,
-    stats: { colors: true, reasons: true, chunks: false }
+    stats: { colors: true,reasons:true,chunks:false  }
 }));
 app.use(whm(compiler))
 
