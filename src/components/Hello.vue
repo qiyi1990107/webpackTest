@@ -1,20 +1,24 @@
 <template>
-   <div class="test">hello{{msg}}</div>
+  <div class="test">
+    hello{{msg}}</div>
 </template> 
 
-<script>
-   export default {
-     name:"Hello",
-     data(){
-       return {
-         msg:",123456"
-       }
-     }
-   }
+<script> 
+export default {
+  name: "Hello",
+  data() {
+    return {
+      msg: "111--->bbbb,"
+    }
+  }
+}
 </script>
 
 <style>
-  .test{
-    background: #fff; width: 30px; height: 50px;color: #000; 
-  }
+.test {
+  width: 300px;
+  height: 150px;
+  color: green;
+  background: red; 
+}
 </style>

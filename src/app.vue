@@ -9,7 +9,7 @@ export default {
   name:"app",
   data(){
     return {
-      test:"78959"
+      test:"78959" 
     }
   },
   components:{Hello}
