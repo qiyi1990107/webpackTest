@@ -17,15 +17,13 @@ let source =  wdm(compiler, {
 })
 app.use(source);
 let template="";
-compiler.plugin('done', (compilation) => {
+compiler.plugin('done', () => {
     let fs = source.fileSystem;
     const html = (() => {
         let filePath = join(wc.output.path,"index.html")
         if(fs.existsSync(filePath)){
-            template = fs.readFileSync(filePath, 'utf-8');
+            template = fs.readFileSync(filePath, 'utf-8') || {};
         }
-        
-        return template;
     })()
 })
 

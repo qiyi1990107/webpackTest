@@ -4,13 +4,13 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import ExtractTextPlugin from "extract-text-webpack-plugin";
 // console.log(resolve(__dirname, "./dist"));
 module.exports = {
-  context: resolve(__dirname, "./src"),
-  entry: ['webpack-hot-middleware/client', "./index.js",],
+  context: resolve(__dirname, ".."),
+  entry: ['webpack-hot-middleware/client', "./src/index.js",],
   // entry: {
   //   app: "./index.js" 
   // },
   output: {
-    path: resolve(__dirname, "./dist"),
+    path: resolve(__dirname, "../dist"),
     filename: '[name].js',
     publicPath: '/dist/',
   },
@@ -22,18 +22,18 @@ module.exports = {
   // },
   module: {
     rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            css: ExtractTextPlugin.extract({
-              use: 'css-loader',
-              fallback: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
-            })
-          }
-        }
-      },
+      // {
+      //   test: /\.vue$/,
+      //   loader: 'vue-loader',
+      //   options: {
+      //     loaders: {
+      //       css: ExtractTextPlugin.extract({
+      //         use: 'css-loader',
+      //         fallback: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
+      //       })
+      //     }
+      //   }
+      // },
       {
         test: /\.js$/,
         use: [
@@ -76,8 +76,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new HtmlWebpackPlugin({ template: './index.tpl.html' }),
-    new ExtractTextPlugin("style.css")
+    // new HtmlWebpackPlugin({ template: './src/index.tpl.html' }),
+    new ExtractTextPlugin("/dist/css/style.css")
 
     // prints more readable module names in the browser console on HMR updates
   ],

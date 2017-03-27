@@ -1,0 +1,7 @@
+
+.test {
+  width: 300px;
+  height: 150px;
+  color: green;
+  background: red;  display: -webkit-box;  display: -ms-flexbox;  display: flex;
+}

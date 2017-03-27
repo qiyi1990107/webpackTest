@@ -19,6 +19,6 @@ export default {
   width: 300px;
   height: 150px;
   color: green;
-  background: red; 
+  background: red;  display: flex;
 }
 </style>
